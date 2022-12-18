@@ -1,0 +1,33 @@
+<div class="telo">
+<h1>Dobrodosli u MetHotels!</h1>
+
+<section class="center">
+    <h3>Forma za dodavanje soba</h3>
+    <form>
+        <label for="broj">Broj sobe</label>
+        <input type="text" name="broj" id="broj" #newbroj placeholder="Broj sobe"><br>
+        <label for="sprat">Sprat sobe</label>
+        <input type="text" name="sprat" id="sprat" #newsprat placeholder="Sprat sobe"><br>
+        <label for="cena">Cenu sobe po nocenju</label>
+        <input type="text" name="cena" id="cena" #newcena placeholder="Cena sobe po nocenju"><br>
+        <button (click)="addSoba(newbroj, newsprat, newcena)" >Dodaj</button>
+    </form>
+</section>
+
+<section class="center">
+    <h3>Lista soba</h3>
+         <table id="tabela">
+                <tr>
+                    <th>Broj sobe</th>
+                    <th>Sprat</th>
+                    <th>Cena po nocenju</th>
+                </tr>
+                <tr *ngFor="let soba of sobas">
+                    <td>{{ soba.broj }}</td>
+                    <td>{{ soba.sprat }}</td>
+                    <td>{{ soba.cena }}</td>
+                </tr>
+        </table>
+</section>
+</div>
+
