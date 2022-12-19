@@ -1,0 +1,59 @@
+h1, .pi {
+    text-align: center;
+  }
+  
+  .telo {
+    width: 1248px;
+    height: 1200;
+    background-color: #923CB5;
+  }
+
+  .center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
+
+  input[type=text], select, .poruka {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #5f9ea0;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+  }
+  
+  button:hover {
+    background-color: #008b8b;
+  }
+  
+  button:active {
+    background-color: #008b8b;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  #mapa {
+    height: 300px;
+    width: 300px;
+    margin-left: 10px;
+  }
+  
+

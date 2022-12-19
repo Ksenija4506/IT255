@@ -1,0 +1,21 @@
+<div class="telo">
+    <h1>Nasa ponuda dostupnih soba u MetHotel-u</h1>
+  
+    <section class="center">
+        <h3>Lista soba</h3>
+             <table id="tabela">
+                    <tr>
+                        <th>Broj sobe</th>
+                        <th>Sprat</th>
+                        <th>Cena po nocenju</th>
+                    </tr>
+                    <tr *ngFor="let ponuda of ponudas">
+                        <td>{{ ponuda.broj }}</td>
+                        <td>{{ ponuda.sprat }}</td>
+                        <td>{{ ponuda.cena }}</td>
+                    </tr>
+            </table>
+    </section>
+    </div>
+    
+    

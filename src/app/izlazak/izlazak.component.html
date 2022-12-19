@@ -1,0 +1,21 @@
+<div class="telo">
+    <h1>Nase preporuke za izlaske</h1>
+
+    <section class="center">
+        <h3>Lista mesta za izlazak</h3>
+             <table id="tabela">
+                    <tr>
+                        <th>Naziv lokala</th>
+                        <th>Adresa</th>
+                        <th>Ocena</th>
+                    </tr>
+                    <tr *ngFor="let izlazak of izlazaks">
+                        <td>{{ izlazak.naziv }}</td>
+                        <td>{{ izlazak.adresa }}</td>
+                        <td>{{ izlazak.ocena }}</td>
+                    </tr>
+            </table>
+    </section>
+    </div>
+    
+    

@@ -1,0 +1,21 @@
+<div class="telo">
+        <h1>Nase preporuke za obilaske</h1>
+    
+        <section class="center">
+            <h3>Lista mesta koje morate obici</h3>
+                 <table id="tabela">
+                        <tr>
+                            <th>Naziv</th>
+                            <th>Cena ulaza</th>
+                            <th>Ocena</th>
+                        </tr>
+                        <tr *ngFor="let obilazak of obilazaks">
+                            <td>{{ obilazak.naziv }}</td>
+                            <td>{{ obilazak.cena }}</td>
+                            <td>{{ obilazak.ocena }}</td>
+                        </tr>
+                </table>
+        </section>
+        </div>
+        
+        
