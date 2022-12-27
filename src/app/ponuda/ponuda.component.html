@@ -5,17 +5,65 @@
         <h3>Lista soba</h3>
              <table id="tabela">
                     <tr>
+                        <th>ID</th>
                         <th>Broj sobe</th>
                         <th>Sprat</th>
+                        <th>Tip sobe</th>
                         <th>Cena po nocenju</th>
                     </tr>
                     <tr *ngFor="let ponuda of ponudas">
+                        <td>{{ ponuda.id }}</td>
                         <td>{{ ponuda.broj }}</td>
                         <td>{{ ponuda.sprat }}</td>
+                        <td>{{ ponuda.tip }}</td>
                         <td>{{ ponuda.cena }}</td>
                     </tr>
             </table>
     </section>
-    </div>
-    
-    
+
+    <section class="center">
+        <h3>Forma za rezervisanje soba</h3>
+            <form [formGroup]="forma" (ngSubmit)="onSubmit()">
+                <label for="ime">Ime</label>
+                <input type="text" name="ime" id="ime" placeholder="Ime" formControlName="ime"><br>
+                <div *ngIf="ime.invalid && ime.touched" class="greska">Ime nije validno!</div>
+                <label for="prezime">Prezime</label>
+                <input type="text" name="prezime" id="prezime" #newbroj placeholder="Prezime" formControlName="prezime"><br>
+                <div *ngIf="prezime.invalid && prezime.touched" class="greska">Prezime nije validno!</div>
+                <label for="mail">E-mail</label>
+                <input type="text" name="mail" id="mail" #newsprat placeholder="E-mail" formControlName="mail"><br>
+                <div *ngIf="mail.invalid && mail.touched" class="greska">E-mail nije validan!</div>
+                <label for="od">Datum od</label><br>
+                <input type="date" name="od" id="od" #newtip placeholder="Datum od" formControlName="od"><br>
+                <div *ngIf="od.invalid && od.touched" class="greska">Datum nije validan!</div>
+                <label for="do">Datum do</label><br>
+                <input type="date" name="do" id="cena" #newcena placeholder="Datum do" formControlName="do"><br>
+                <div *ngIf="do.invalid && do.touched" class="greska">Datum nije validan!</div>
+                <label for="id">ID sobe</label>
+                <input type="text" name="id" id="id" #newid placeholder="ID" formControlName="id"><br>
+                <div *ngIf="id.invalid && id.touched" class="greska">ID nije validan!</div>
+                <label for="dodatno">Dodatne usluge:</label><br>
+                <section class="dodatneUsluge">
+                    <div *ngFor="let dodatne of dodatnes">
+                    <input type="checkbox" (click)="onCheckboxChange($event, dodatne)"/>
+                    {{ dodatne.naziv }}</div>
+                
+                  <!--  <input type="checkbox" id="klima" name="klima" [value]="dodatnes[0]"> 
+                    <label for="klima">{{ dodatnes[0].naziv }}</label><br>
+                    <input type="checkbox" id="bar" name="bar" value="Bar">
+                    <label for="bar">{{ dodatnes[1].naziv }}</label><br>
+                    <input type="checkbox" id="sauna" name="sauna" value="Sauna">
+                    <label for="sauna">{{ dodatnes[2].naziv }}</label><br>
+                    <input type="checkbox" id="dorucak" name="dorucak" value="Dorucak">
+                    <label for="dorucak">{{ dodatnes[3].naziv }}</label><br>
+                    <input type="checkbox" id="djakuzi" name="djakuzi" value="Djakuzi">
+                    <label for="djakuzi">{{ dodatnes[4].naziv }}</label><br><br>
+                </section>-->
+            </section><br>
+                <button (click)="proveraImena(); proveraPrezimena()">Rezervisi</button>
+            </form>
+    </section>
+</div>
+        
+       
+        

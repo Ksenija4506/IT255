@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { ObrokComponent } from './obrok/obrok.component';
 import { IzlazakComponent } from './izlazak/izlazak.component';
 import { ObilazakComponent } from './obilazak/obilazak.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +22,15 @@ import { ObilazakComponent } from './obilazak/obilazak.component';
     OnamaComponent,
     ObrokComponent,
     IzlazakComponent,
-    ObilazakComponent
+    ObilazakComponent,
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
