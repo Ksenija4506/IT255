@@ -11,6 +11,7 @@ import { OnamaComponent } from './onama/onama.component';
 import { ObrokComponent } from './obrok/obrok.component';
 import { IzlazakComponent } from './izlazak/izlazak.component';
 import { ObilazakComponent } from './obilazak/obilazak.component';
+import { ZavisnostiComponent } from './zavisnosti/zavisnosti.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ObilazakComponent } from './obilazak/obilazak.component';
     ObrokComponent,
     IzlazakComponent,
     ObilazakComponent,
+    ZavisnostiComponent,
 
 
   ],

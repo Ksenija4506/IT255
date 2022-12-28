@@ -39,6 +39,9 @@
                 <label for="do">Datum do</label><br>
                 <input type="date" name="do" id="cena" #newcena placeholder="Datum do" formControlName="do"><br>
                 <div *ngIf="do.invalid && do.touched" class="greska">Datum nije validan!</div>
+                <label for="noci">Broj noci</label><br>
+                <input type="text" name="noci" id="noci" #newnoci placeholder="Broj noci" formControlName="noci"><br>
+                <div *ngIf="noci.invalid && noci.touched" class="greska">Broj noci nije validan!</div>
                 <label for="id">ID sobe</label>
                 <input type="text" name="id" id="id" #newid placeholder="ID" formControlName="id"><br>
                 <div *ngIf="id.invalid && id.touched" class="greska">ID nije validan!</div>
@@ -59,9 +62,14 @@
                     <input type="checkbox" id="djakuzi" name="djakuzi" value="Djakuzi">
                     <label for="djakuzi">{{ dodatnes[4].naziv }}</label><br><br>
                 </section>-->
+               
             </section><br>
+            
                 <button (click)="proveraImena(); proveraPrezimena()">Rezervisi</button>
+                <app-zavisnosti></app-zavisnosti>
             </form>
+
+            
     </section>
 </div>
         

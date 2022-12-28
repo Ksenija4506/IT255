@@ -34,6 +34,7 @@ export class PonudaComponent implements OnInit {
   mail: AbstractControl;
   od: AbstractControl;
   do: AbstractControl;
+  noci: AbstractControl;
   id: AbstractControl;
   korisnici: any;
   cena: AbstractControl;
@@ -59,11 +60,12 @@ export class PonudaComponent implements OnInit {
     this.korisnici = [];
   
     this.forma = fb.group({
-      'ime': ['', Validators.compose([Validators.required, Validators.minLength(3)])],
+      ime: ['', Validators.compose([Validators.required, Validators.minLength(3)])],
       prezime: ['', Validators.compose([Validators.required, Validators.minLength(3)])],
       mail: ['', Validators.compose([Validators.required, Validators.email])],
       od: ['', Validators.required],
       do: ['', Validators.required],
+      noci: ['', Validators.compose([Validators.required, Validators.pattern(this.numertRegex)])],
       id: ['', Validators.compose([Validators.required, Validators.pattern(this.numertRegex)])],
     })
 
@@ -72,6 +74,7 @@ export class PonudaComponent implements OnInit {
     this.mail = this.forma.controls['mail'];
     this.od = this.forma.controls['od'];
     this.do = this.forma.controls['do'];
+    this.noci = this.forma.controls['noci'];
     this.id = this.forma.controls['id'];
 
     this.cena = this.forma.controls['cena'];
