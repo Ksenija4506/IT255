@@ -5,6 +5,7 @@ import { ObilazakComponent } from './obilazak/obilazak.component';
 import { ObrokComponent } from './obrok/obrok.component';
 import { OnamaComponent } from './onama/onama.component';
 import { PonudaComponent } from './ponuda/ponuda.component';
+import { RoomComponent } from './room/room.component';
 import { SobaComponent } from './soba/soba.component';
 
 const routes: Routes = [
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path : 'obilazak',
     component : ObilazakComponent
+  },
+  {
+    path : 'room',
+    component : RoomComponent
   }
 ];
 

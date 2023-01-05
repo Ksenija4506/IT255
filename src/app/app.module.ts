@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,10 @@ import { ObrokComponent } from './obrok/obrok.component';
 import { IzlazakComponent } from './izlazak/izlazak.component';
 import { ObilazakComponent } from './obilazak/obilazak.component';
 import { ZavisnostiComponent } from './zavisnosti/zavisnosti.component';
+import { RoomComponent } from './room/room.component';
+
+
+
 
 
 @NgModule({
@@ -25,14 +30,14 @@ import { ZavisnostiComponent } from './zavisnosti/zavisnosti.component';
     IzlazakComponent,
     ObilazakComponent,
     ZavisnostiComponent,
-
-
+    RoomComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

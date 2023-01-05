@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 3,
+      "broj": "5",
+      "sprat": "1",
+      "tip": "Jednokrevetna",
+      "cena": "1550"
+    },
+    {
+      "id": 4,
+      "broj": "5",
+      "sprat": "2",
+      "tip": "Trokrevetna",
+      "cena": "3330"
+    },
+    {
+      "id": 5,
+      "broj": "5",
+      "sprat": "2",
+      "tip": "Dvokrevetna",
+      "cena": "3500"
+    },
+    {
+      "id": 8,
+      "broj": "1",
+      "sprat": "1",
+      "tip": "Trokrevetna",
+      "cena": "1700"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

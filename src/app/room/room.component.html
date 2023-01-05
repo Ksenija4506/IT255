@@ -1,0 +1,65 @@
+<div class="telo">
+    <section class="center">
+    <h1>Rad sa bazom</h1>
+    <button (click)="clickAddRoom()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="dugme">Dodaj sobu</button>
+        <table id="tabela">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Broj sobe</th>
+                <th scope="col">Sprat</th>
+                <th scope="col">Tip sobe</th>
+                <th scope="col">Cena po nocenju</th>
+                <th scope="col">Akcije</th>
+            </tr>
+            <tr *ngFor="let row of roomData">
+                <td>{{ row.id }}</td>
+                <td>{{ row.broj }}</td>
+                <td>{{ row.sprat }}</td>
+                <td>{{ row.tip }}</td>
+                <td>{{  row.cena }}</td>
+                <td>
+                    <button (click)="onEdit(row)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Izmeni</button>
+                    <button type="button" (click)="roomDelete(row)">Obrisi</button>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Forma za dodavanje sobe</h1>
+          <button type="button" id="cancel" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <form [formGroup]="formValue">
+        <label for="broj">Broj sobe</label>
+        <input type="text" name="broj" id="broj" #newbroj placeholder="Broj sobe" formControlName="broj"><br>
+        <label for="sprat">Sprat sobe</label>
+        <input type="text" name="sprat" id="sprat" #newsprat placeholder="Sprat sobe" formControlName="sprat"><br>
+        <label for="tip">Tip sobe</label>
+        <input type="text" name="tip" id="tip" #newtip placeholder="Tip sobe" formControlName="tip"><br>
+        <label for="cena">Cenu sobe po nocenju</label>
+        <input type="text" name="cena" id="cena" #newcena placeholder="Cena sobe po nocenju" formControlName="cena"><br>
+      </form>  
+      </div>
+        <div class="modal-footer">
+          <button type="button" *ngIf="showAdd" (click)="postRoomDetails()" class="btn btn-primary">Dodaj</button>
+          <button type="button" *ngIf="showUpdate" (click)="updateRoomDetails()" class="btn btn-primary">Izmeni</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+
+
+
+
+
+
+
+</div>
+
