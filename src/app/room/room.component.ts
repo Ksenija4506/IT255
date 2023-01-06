@@ -61,6 +61,7 @@ export class RoomComponent implements OnInit{
     this.api.getRoom()
     .subscribe(res=>{
       this.roomData = res;
+      console.log("Sobe", res)
     })
   }
 

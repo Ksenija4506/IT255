@@ -14,6 +14,7 @@ import { IzlazakComponent } from './izlazak/izlazak.component';
 import { ObilazakComponent } from './obilazak/obilazak.component';
 import { ZavisnostiComponent } from './zavisnosti/zavisnosti.component';
 import { RoomComponent } from './room/room.component';
+import { ApiService } from './shared/api.service';
 
 
 
@@ -30,7 +31,7 @@ import { RoomComponent } from './room/room.component';
     IzlazakComponent,
     ObilazakComponent,
     ZavisnostiComponent,
-    RoomComponent,
+    RoomComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +40,7 @@ import { RoomComponent } from './room/room.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

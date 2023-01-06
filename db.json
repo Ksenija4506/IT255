@@ -1,15 +1,8 @@
 {
-  "posts": [
-    {
-      "id": 3,
-      "broj": "5",
-      "sprat": "1",
-      "tip": "Jednokrevetna",
-      "cena": "1550"
-    },
+  "rooms": [
     {
       "id": 4,
-      "broj": "5",
+      "broj": "19",
       "sprat": "2",
       "tip": "Trokrevetna",
       "cena": "3330"
