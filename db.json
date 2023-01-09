@@ -22,8 +22,26 @@
       "cena": "1700"
     }
   ],
-  "comments": [],
-  "profile": {
-    "name": "typicode"
+  "toDo": [ 
+    {
+    "id": 1,
+    "naziv" : "Ocistiti sobu broj: 8"
+  },
+  {
+    "id" : 2,
+    "naziv" : "Dostaviti hranu u sobu broj: 10"
+  },
+  {
+    "id" : 3,
+    "naziv": "Dostaviti hranu u sobu broj: 5"
+  },
+  {
+    "id" : 4,
+    "naziv" : "Rezervisati sobu broj: 9"
+  },
+  {
+    "id" : 5,
+    "naziv" :"Ocistiti sobu broj: 2"
   }
-}
+]
+    }
