@@ -7,6 +7,7 @@ import { OnamaComponent } from './onama/onama.component';
 import { PonudaComponent } from './ponuda/ponuda.component';
 import { RoomComponent } from './room/room.component';
 import { SobaComponent } from './soba/soba.component';
+import { TodoHomeComponent } from './todo-home/todo-home.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path : 'room',
     component : RoomComponent
+  },
+  {
+    path : 'todo-home',
+    component : TodoHomeComponent
   }
 ];
 
